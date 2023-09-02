@@ -11,7 +11,6 @@ class Calc{
 		float findLength(vector<int> v); //returns length of vector 
 		float dotProduct(vector<int> v1, vector<int> v2); //returns the dot product
 		vector<float> crossProduct(vector<int> v1, vector<int> v2);//returns the cross product.
-		string vectorToString(vector<int> v);
 };
 
 int main(){
@@ -57,7 +56,3 @@ vector<float> Calc::crossProduct(vector<int> v1, vector<int> v2){
 	v.assign({iCon, jCon, kCon});
 	return v;
 };
-
-string Calc::vectorToString(vector<int> v){
-	return to_string(v.at(0)) + ' ' + to_string(v.at(1)) + ' ' + to_string(v.at(2));
-}	

@@ -18,8 +18,8 @@ int main(){
 	vector<int> v2(3);
 	calc.assignVector(&v1);
 	calc.assignVector(&v2);
-	cout << v1.at(0) << v1.at(1) << v1.at(2);
-	cout << v2.at(0) << v2.at(1) << v2.at(2);
+	//cout << v1.at(0);
+	//cout << v2.at(0) << v2.at(1) << v2.at(2);
 
 	/*
 	cout << calc.vectorToString(v1);
@@ -34,10 +34,8 @@ int main(){
 
 void Calc::assignVector(vector<int>* v){
 	int x = 0, y = 0, z = 0;
-	cin >> x >> y >> z;
-	v->assign(0, x);
-	v->assign(1, y);
-	v->assign(2, z);
+	//cin >> x >> y >> z;
+	//v->assign({x, y, z});
 };
 
 float Calc::findLength(vector<int> v){

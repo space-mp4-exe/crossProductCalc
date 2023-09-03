@@ -4,19 +4,18 @@
 using namespace std;
 
 //Calculates the length, dot product, and cross product of two vetors in R^3 space
-//don't ask me why it changes from a int vector to a float vector halfway thru
 class Calc{
 	public:
-		vector<int> assignVector(vector<int> v);//assigns the values for a 3 length int vector
-		float findLength(vector<int> v); //returns length of vector 
-		float dotProduct(vector<int> v1, vector<int> v2); //returns the dot product
-		vector<float> crossProduct(vector<int> v1, vector<int> v2);//returns the cross product.
+		vector<float> assignVector(vector<float> v);//assigns the values for a 3 length int vector
+		float findLength(vector<float> v); //returns length of vector 
+		float dotProduct(vector<float> v1, vector<float> v2); //returns the dot product
+		vector<float> crossProduct(vector<float> v1, vector<float> v2);//returns the cross product.
 };
 
 int main(){
 	Calc calc;
-	vector<int> v1(3);
-	vector<int> v2(3);
+	vector<float> v1(3);
+	vector<float> v2(3);
 	v1 = calc.assignVector(v1);
 	v2 = calc.assignVector(v2);
 
@@ -27,23 +26,23 @@ int main(){
 	cout <<"cross product: < " << cpVector[0] << ", " << cpVector[1] << ", " << cpVector[2] << " >" << endl;
 };
 
-vector<int> Calc::assignVector(vector<int> v){
-	int x = 0, y = 0, z = 0;
+vector<float> Calc::assignVector(vector<float> v){
+	float x = 0, y = 0, z = 0;
 	cin >> x >> y >> z;
 	v.assign({x, y, z});
 	return v;
 };
 
-float Calc::findLength(vector<int> v){
+float Calc::findLength(vector<float> v){
 	double len = sqrt(pow(v.at(0), 2) + pow(v.at(1), 2) + pow(v.at(2), 2));
 	return len;
 };
 
-float Calc::dotProduct(vector<int> v1, vector<int> v2){
+float Calc::dotProduct(vector<float> v1, vector<float> v2){
 	return v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
 };
 
-vector<float> Calc::crossProduct(vector<int> v1, vector<int> v2){
+vector<float> Calc::crossProduct(vector<float> v1, vector<float> v2){
 	vector<float> v;
 	float iCon;
 	float jCon;

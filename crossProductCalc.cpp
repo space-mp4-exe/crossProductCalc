@@ -36,7 +36,8 @@ int main(){
 vector<float> Calc::assignVector(vector<float> v){
 	float x = 0, y = 0, z = 0;
 	cin >> x >> y >> z;
-	v.assign({x, y, z});
+	float arr[] ={x, y, z};
+	v.assign(arr, arr + 3);
 	return v;
 };
 
@@ -59,7 +60,8 @@ vector<float> Calc::crossProduct(vector<float> v1, vector<float> v2){
 	jCon = v1[0] * v2[2] - v1[2] * v2[0];
 	jCon *= -1;//flip sign of j conponent because that's just what we do
 	kCon = v1[0] * v2[1] - v1[1] * v2[0];
-	v.assign({iCon, jCon, kCon});
+	float arr[] = {iCon, jCon, kCon};
+	v.assign(arr, arr + 3);
 	return v;
 };
 
